@@ -345,6 +345,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .rss-button {
     opacity: 0.8;
+    padding-right: 20px;
 }
 
 .rss-button:hover {

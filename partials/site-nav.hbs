@@ -11,6 +11,7 @@
             {{navigation}}
         {{/if}}
     </div>
+
     <div class="site-nav-right">
         <div class="social-links">
             {{#if @blog.facebook}}
@@ -24,7 +25,9 @@
             <a class="subscribe-button" href="#subscribe">{{t "Subscribe"}}</a>
         {{else}}
             <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-            <a class="cd-search-trigger" href="#search" rel="noopener">{{> "icons/search"}}</a>
         {{/if}}
+        {{^is "home"}}
+            <a class="cd-search-trigger" href="#search" rel="noopener">{{> "icons/search"}}</a>
+        {{/is}}
     </div>
 </nav>
