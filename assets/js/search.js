@@ -55,11 +55,14 @@ jQuery(document).ready(function($){
         if( event.which=='27' ) closeSearchForm();
     });
 
+    let template = '<li id=\'gh-{{ref}}\' class=\'gh-search-item\'><a class="image-wrapper" href="{{link}}"><img src="../img/placeholder.png" alt="News image"></a><h4><a class="cd-nowrap" href="{{link}}">{{title}}</a></h4><time datetime="2016-01-12">{{prettyPubDate}}</time></li>';
+
     /*search post*/
     $("#search-field").ghostHunter({
         results: "#search-results",
+        info_template: "<h4>Number of posts found: {{amount}}</h4>",
         onKeyUp: true,
         displaySearchInfo: true,
-        result_template : "<a href='{{link}}'><li class='list-group-item'>{{title}}</li></a>",
+        result_template : "<li id='gh-{{ref}}' class='gh-search-item'><a class=\"image-wrapper\" href=\"{{link}}\"><img src=\"{{feature_image}}\" alt=\"News image\"></a><h4><a class=\"cd-nowrap\" href=\"{{link}}\">{{title}}</a></h4><time datetime=\"2016-01-12\">{{pubDate}}</time></li>",
     });
 });

@@ -276,6 +276,9 @@ Search Form
         max-width: 100%;
         padding: .2em 0;
     }
+    .cd-search-suggestions h4, .cd-search-suggestions p {
+        color:#7a7c86;
+    }
     .cd-search-suggestions a {
         display: inline-block;
         color: #333545;
